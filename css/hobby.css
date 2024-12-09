@@ -1,0 +1,194 @@
+
+/* 容器样式 */
+.hobby-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 40px;
+    
+}
+
+/* 卡片样式 */
+.hobby-card {
+    animation: fadeIn 2s ease forwards;
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    position: relative;
+    margin: 30px 50px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    
+}
+
+.hobby-card:nth-child(1) {
+    background-image: url(../img/赵汝亮.jpg);
+    
+}
+.hobby-card:nth-child(2) {
+    background-image: url(../img/阅读.jpg);
+    
+}
+.hobby-card:nth-child(3) {
+    background-image: url(../img/ai.jpg);
+    
+}
+
+/* 鼠标悬停卡片效果 */
+.hobby-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 卡片的遮罩层 */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 遮罩颜色 */
+    opacity: 0;
+    border-radius: 15px;
+    transition: opacity 0.4s ease-in-out; /* 添加过渡动画 */
+}
+
+/* 鼠标滑入卡片时显示遮罩 */
+.hobby-card:hover .overlay {
+    opacity: 1;
+}
+
+/* 按钮样式 */
+.button, .button1 {
+    background: linear-gradient(240deg, #63d8e0, #63aac8);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    z-index: 10;
+    margin-top: 150px;
+    transition: all 0.3s ease;
+}
+
+.button:hover, .button1:hover {
+    background: linear-gradient(2240deg, #34cba7, #3bb493);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.button:active, .button1:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    
+}
+
+.popup.show {
+    display: flex;
+    animation: scaleIn 0.5s ease forwards;
+}
+.popup-content {
+    color: #333;
+    width: 60%;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-image: url(../img/bg.jpeg);
+}
+
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+    color: #4f46e5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-1200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.pop_left{
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+.pop_left>img{
+    width: 200px;
+    height: 300px;
+    margin: auto auto;
+}
+.pop_right{
+    float: right;
+    width: 300px;
+    margin-left: 60px;
+    color: #333;
+    font-size: 22px;
+    padding-top: 4%;
+    line-height: 35px;
+    font-family:"宋体";  
+}
+video{
+    width: 300px;
+    height: 300px;
+    margin-top: -8%;
+}
+.text{
+    text-align: center;
+    font-size: 30px;
+    font-family: serif,"宋体";
+    color: rgb(77, 139, 211);
+    margin-top: 20px;
+}

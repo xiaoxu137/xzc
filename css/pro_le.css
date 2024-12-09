@@ -1,0 +1,150 @@
+.center{
+    width: 1100px;
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-width:none; /* 调整滚动条宽度 (Firefox) */
+    scrollbar-color: #888 #f4f4f4; 
+    overflow-x: hidden; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: scaleIn 0.5s forwards ease-in-out;
+    margin-top: 3%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.skills-container,.education{
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    
+}
+.skills-container{
+    float: left;
+}
+.education{
+    float: right;
+}
+.education>h1{
+    margin-top: -8px;
+    margin-left: 85px;
+}
+.skill {
+    margin-bottom: 20px;
+    position: relative; 
+}
+
+.skill-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.progress {
+    height: 100%;
+    width: 0%;
+    transition: width 1.5s ease-in-out;
+    border-radius: 4px;
+}
+
+.timeline {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px 0;
+    height: 400px;
+    position: absolute;
+    margin-top: 340px;
+    
+}
+.circle>h4{
+    margin-top: -50px;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 200px;
+    width: 2px;
+    height: 100%;
+    background-color: #e0e0e0;
+    margin-left: 230px;
+}
+
+.timeline-year1 {
+    font-weight: bold;
+    margin-top: 150px;
+    float: left; 
+}
+.timeline-year2 {
+    font-weight: bold; 
+    float: left;
+    margin-top: 180px;
+}
+.timeline-year1,.timeline-year2,.timeline-content{
+    margin-left: 10%;
+}
+
+.timeline-content1{
+    margin-top: 150px;
+}
+.timeline-content2{
+    margin-top: 50px;
+}
+.timeline-content1,.timeline-content2 {
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%;
+    float: right;   
+}
+.timeline-content p {
+    line-height: 1.5;
+    font-size: 14px;
+    color: #555;
+}
+
+.circle {
+    position: absolute;
+    top: 20px;
+    left: -345px;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    margin-left: 300px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 7px rgba(59, 130, 246, 0);
+    }
+}
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+ul{
+    list-style-type: none;
+}

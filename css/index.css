@@ -1,0 +1,94 @@
+body{
+    background-image: url("../img/bg2.png"); /* 你可以替换成图片路径 */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "webfont";
+    src: url(../fonts/webfont.ttf);
+    src: url(../fonts/webfont.woff)
+    url('webfont.woff') format('woff'), /* chrome、firefox */
+}
+#wrap{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    cursor: pointer;
+}
+.star {
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    /* 定义了一个五角星的形状。顶点的百分比对应于五角星的关键点位置。 */
+    clip-path: polygon(
+                50% 0%,    /* 顶点 */
+                61% 35%,   /* 右上 */
+                98% 35%,   /* 右中 */
+                68% 57%,   /* 右下 */
+                79% 91%,   /* 底部 */
+                50% 70%,   /* 中心下 */
+                21% 91%,   /* 左底部 */
+                32% 57%,   /* 左下 */
+                2% 35%,    /* 左中 */
+                39% 35%    /* 左上 */
+            );
+    animation: fade 1s linear;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+        /* 设置大小 */
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+.nav_item{
+    display: inline-block;
+    background-image: linear-gradient(45deg, rgb(118, 220, 193), rgb(111, 210, 241), rgb(64, 195, 215), rgb(56, 186, 212));
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s ease infinite;
+}
+nav>ul{
+    margin: 0%;
+    padding: 0%;}
+.nav_item>p{
+    font-family:"webfont" !important;
+    font-style: normal;
+    font-size: 30px;   
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.top_nav{
+    margin:auto auto;
+    width: 1000px;
+}
+li:nth-child(n+1){
+    margin-left: 11%;
+}
+#nav_text:hover{
+    transform: scale(1.5);
+    color: rgb(18, 7, 92);
+	transition: all 500ms;
+}
